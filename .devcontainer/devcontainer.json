@@ -1,14 +1,5 @@
 {
-	"name": "python-fastapi-azure-cosmos-db-todo-list",
-	"forwardPorts": [80],
-	"build": {
-		"dockerfile": "Dockerfile",
-		"context": "..",
-		"args": {
-			"VARIANT": "3.10-bullseye",
-			"NODE_VERSION": "none"
-		}
-	},
+	"image": "mcr.microsoft.com/devcontainers/python:3.10-bullseye",
 	"customizations": {
 		"vscode": {
 			"settings": {
