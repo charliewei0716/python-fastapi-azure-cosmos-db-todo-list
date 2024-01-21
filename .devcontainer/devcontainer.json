@@ -1,0 +1,28 @@
+{
+	"name": "python-fastapi-azure-cosmos-db-todo-list",
+	"forwardPorts": [80],
+	"build": {
+		"dockerfile": "Dockerfile",
+		"context": "..",
+		"args": {
+			"VARIANT": "3.10-bullseye",
+			"NODE_VERSION": "none"
+		}
+	},
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python"
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance"
+			]
+		}
+	},
+	"postCreateCommand": "pip3 install --user -r requirements.txt",
+	"remoteUser": "vscode",
+	"features": {
+		"azure-cli": "latest"
+	}
+}
