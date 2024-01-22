@@ -38,3 +38,13 @@ async def list_todos():
     todos = [todo async for todo in app.todo_items_container.read_all_items()]
     return todos
 
+@app.put("/update", response_model=ToDoItem)
+async def replace_todo(new_item: Annotated[ToDoItem, Body()]):
+    old_item = await app.todo_items_container.read_item(new_item.id, partition_key=new_item.id)
+    old_item |= jsonable_encoder(new_item)
+    updated_item = await app.todo_items_container.replace_item(new_item.id, old_item)   
+    return updated_item
+
+@app.delete("/delete")
+async def delete_todo(item_id: str):
+    await app.todo_items_container.delete_item(item_id, partition_key=item_id)
