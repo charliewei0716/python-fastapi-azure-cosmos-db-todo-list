@@ -2,19 +2,24 @@
 
 # Building a Todo List Application with Azure Cosmos DB and FastAPI in Python
 
-This repository contains a Todo List application that demonstrates how to use [Azure Cosmos DB](https://learn.microsoft.com/zh-tw/azure/cosmos-db/introduction) as a backend database with a [FastAPI](https://fastapi.tiangolo.com/) service in Python. The application allows users to manage their todo items with CRUD operations.
+This repository hosts a Todo List application that demonstrates the integration of [Azure Cosmos DB](https://learn.microsoft.com/zh-tw/azure/cosmos-db/introduction) as a backend database with a [FastAPI](https://fastapi.tiangolo.com/) service in Python. It offers a simple interface for users to manage their tasks with Create, Read, Update, and Delete (CRUD) operations.
 
 ## Features
 - Set up the development environment and install the required Python libraries.
 - Connect to Azure Cosmos DB using a KEY with the Python client.
 - Create the necessary databases and containers using Python.
-- Define the ToDoItem data model in FastAPI and write the CRUD API endpoints.
+- Definition of the ToDoItem data model within FastAPI and implementation of the CRUD API endpoints.
 
 ## Getting Started
 1. Click on the **Open in GitHub Codespaces** above to open this repository in Codespaces.
-2. Create a file named *.env* in the */src/* directory, and write your  `COSMOS_URI` and `COSMOS_KEY` into it.
-3. Start the web app:
+2. Within the Codespaces environment, navigate to the */src/* directory and create a *.env* file. Populate it with your Azure Cosmos DB URI and KEY like so:
   ```
+  COSMOS_URI = "your_cosmos_db_uri"
+  COSMOS_KEY = "your_cosmos_db_key"
+  ```
+3. Launch the web app by running the following commands:
+  ```
+  cd src/ &&
   uvicorn main:app --reload
   ```
 
