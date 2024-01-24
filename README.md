@@ -25,3 +25,5 @@ This repository hosts a Todo List application that demonstrates the integration 
 
 ## Blog Post
 For more detailed explanations and insights about this project, check out my blog post:
+- [【Azure Cosmos DB】CRUD Operations on Cosmos DB Using Python FastAPI (Part 1)](https://www.charliewei.net/2024/01/python-fastapi-azure-cosmos-db-todo-list-1.html)
+- [【Azure Cosmos DB】CRUD Operations on Cosmos DB Using Python FastAPI (Part 2)](https://www.charliewei.net/2024/01/python-fastapi-azure-cosmos-db-todo-list-2.html)
